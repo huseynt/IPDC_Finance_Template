@@ -1,0 +1,160 @@
+@import "variable";
+@import "extend";
+@import "mixin";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    // background-color: ;
+}
+
+
+//-------------------- header -------------------------
+.header {
+    width: 100%;
+    padding: 20px 8%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff00;
+    z-index: 999;
+
+    &_logo {
+
+    }
+
+    &_nav {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        column-gap: 3%;
+
+        &-item {
+            text-decoration: none;
+            @extend %font_s;
+        }
+    }
+
+    &_right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+
+        &-link {
+            &-img {
+                width: 19px;
+            }
+        }
+
+        &-button {
+            @extend %button_p;
+        }
+    }
+}
+
+// ------------------ main --------------------
+.main {
+    padding-bottom: 5000px;
+
+    //------------ up section -------------
+    &_up {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        &-left {
+            padding: 200px 10px 0 16%;
+
+            &-apply {
+                display: flex;
+                flex-direction: column;
+                row-gap: 35px;
+                
+                &-head {
+                    max-width: 440px;
+                    @extend %font_xxl;
+                }
+                &-info {
+                    max-width: 350px;
+                    @extend %font_sm;
+                }
+                &-block {
+                    &-button {
+                        @extend %button_p;
+                    }
+                    &-buttonout {
+                        margin-left: 10px; 
+                        @extend %button_p_out;
+                    }
+                }
+            }
+
+            &-contact {
+                padding: 200px 0 10px 0;
+                display: flex;
+
+                &-left {
+                    padding-right: 15px;
+                    border-right: 1px solid #00000040;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+                    @extend %font_sm;
+                    font-weight: 600;
+
+                    &-number {
+                        padding-left: 5px;
+                    }
+                }
+                &-right {
+                    padding: 0 15px;
+
+                    &-link {
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+
+        &-right {
+            background-color: #FFEAF5;
+
+            &-car {
+                @extend %loan;
+                top: 150px;
+                right: 600px;
+                &-img {
+                    width: 25px;
+                }
+            }
+
+            &-home {
+                @extend %loan;
+                top: 200px;
+                right: 100px;
+                &-img {
+                    width: 25px;
+                }
+            }
+
+
+
+            &-removebg {
+                margin-left: 200px;
+                position: absolute;
+                right: 0;
+                top: 125px;
+                
+
+                &-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "variable";
+
+%font_s {
+    font-family: "Metrophobic", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: $black;
+}
+%font_sm {
+    font-family: "Metrophobic", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $black;
+}
+
+%font_xxl {
+    font-family: "Metrophobic", sans-serif;
+    font-size: 63px;
+    font-weight: 600;
+    color: $black;
+}
+
+// buttons
+%button_p {
+    padding: 10px 19px;
+    border-radius: 4px;
+    color: $white;
+    border: none;
+    @extend %font_s;
+    background-color: $purpole;
+    cursor: pointer;
+}
+%button_p_out {
+    padding: 10px 19px;
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid $purpole;
+    @extend %font_s;
+    color: $purpole;
+    cursor: pointer;
+}
+
+// loans
+%loan {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border: none;
+    border-radius: 55px;
+    box-shadow: 0 0 5px 5px #0000001c;
+    background-color: $white;
+    position: absolute;
+    font-weight: 600;
+}
